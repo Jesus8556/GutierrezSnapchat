@@ -9,21 +9,26 @@
 /* Begin PBXBuildFile section */
 		9DBEB7692AFAECCE0021EBF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBEB7682AFAECCE0021EBF8 /* AppDelegate.swift */; };
 		9DBEB76B2AFAECCE0021EBF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBEB76A2AFAECCE0021EBF8 /* SceneDelegate.swift */; };
-		9DBEB76D2AFAECCE0021EBF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBEB76C2AFAECCE0021EBF8 /* ViewController.swift */; };
+		9DBEB76D2AFAECCE0021EBF8 /* iniciarSesionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBEB76C2AFAECCE0021EBF8 /* iniciarSesionViewController.swift */; };
 		9DBEB7702AFAECCE0021EBF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DBEB76E2AFAECCE0021EBF8 /* Main.storyboard */; };
 		9DBEB7722AFAECD40021EBF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DBEB7712AFAECD40021EBF8 /* Assets.xcassets */; };
 		9DBEB7752AFAECD40021EBF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DBEB7732AFAECD40021EBF8 /* LaunchScreen.storyboard */; };
+		9DBEB77D2AFAEF9E0021EBF8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DBEB77C2AFAEF9E0021EBF8 /* GoogleService-Info.plist */; };
+		9DBEB7802AFAF3B70021EBF8 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9DBEB77F2AFAF3B70021EBF8 /* FirebaseAnalytics */; };
+		9DBEB7822AFAF3B70021EBF8 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 9DBEB7812AFAF3B70021EBF8 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		9DBEB7842AFAF3B70021EBF8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9DBEB7832AFAF3B70021EBF8 /* FirebaseAuth */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9DBEB7652AFAECCE0021EBF8 /* GutierrezSnapchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GutierrezSnapchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DBEB7682AFAECCE0021EBF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DBEB76A2AFAECCE0021EBF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9DBEB76C2AFAECCE0021EBF8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9DBEB76C2AFAECCE0021EBF8 /* iniciarSesionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iniciarSesionViewController.swift; sourceTree = "<group>"; };
 		9DBEB76F2AFAECCE0021EBF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9DBEB7712AFAECD40021EBF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DBEB7742AFAECD40021EBF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9DBEB7762AFAECD40021EBF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DBEB77C2AFAEF9E0021EBF8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DBEB7802AFAF3B70021EBF8 /* FirebaseAnalytics in Frameworks */,
+				9DBEB7842AFAF3B70021EBF8 /* FirebaseAuth in Frameworks */,
+				9DBEB7822AFAF3B70021EBF8 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,11 +66,12 @@
 			children = (
 				9DBEB7682AFAECCE0021EBF8 /* AppDelegate.swift */,
 				9DBEB76A2AFAECCE0021EBF8 /* SceneDelegate.swift */,
-				9DBEB76C2AFAECCE0021EBF8 /* ViewController.swift */,
+				9DBEB76C2AFAECCE0021EBF8 /* iniciarSesionViewController.swift */,
 				9DBEB76E2AFAECCE0021EBF8 /* Main.storyboard */,
 				9DBEB7712AFAECD40021EBF8 /* Assets.xcassets */,
 				9DBEB7732AFAECD40021EBF8 /* LaunchScreen.storyboard */,
 				9DBEB7762AFAECD40021EBF8 /* Info.plist */,
+				9DBEB77C2AFAEF9E0021EBF8 /* GoogleService-Info.plist */,
 			);
 			path = GutierrezSnapchat;
 			sourceTree = "<group>";
@@ -83,6 +92,11 @@
 			dependencies = (
 			);
 			name = GutierrezSnapchat;
+			packageProductDependencies = (
+				9DBEB77F2AFAF3B70021EBF8 /* FirebaseAnalytics */,
+				9DBEB7812AFAF3B70021EBF8 /* FirebaseAnalyticsWithoutAdIdSupport */,
+				9DBEB7832AFAF3B70021EBF8 /* FirebaseAuth */,
+			);
 			productName = GutierrezSnapchat;
 			productReference = 9DBEB7652AFAECCE0021EBF8 /* GutierrezSnapchat.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 9DBEB75C2AFAECCE0021EBF8;
+			packageReferences = (
+				9DBEB77E2AFAF3B70021EBF8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 9DBEB7662AFAECCE0021EBF8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DBEB7752AFAECD40021EBF8 /* LaunchScreen.storyboard in Resources */,
+				9DBEB77D2AFAEF9E0021EBF8 /* GoogleService-Info.plist in Resources */,
 				9DBEB7722AFAECD40021EBF8 /* Assets.xcassets in Resources */,
 				9DBEB7702AFAECCE0021EBF8 /* Main.storyboard in Resources */,
 			);
@@ -138,7 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DBEB76D2AFAECCE0021EBF8 /* ViewController.swift in Sources */,
+				9DBEB76D2AFAECCE0021EBF8 /* iniciarSesionViewController.swift in Sources */,
 				9DBEB7692AFAECCE0021EBF8 /* AppDelegate.swift in Sources */,
 				9DBEB76B2AFAECCE0021EBF8 /* SceneDelegate.swift in Sources */,
 			);
@@ -356,6 +374,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9DBEB77E2AFAF3B70021EBF8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9DBEB77F2AFAF3B70021EBF8 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DBEB77E2AFAF3B70021EBF8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		9DBEB7812AFAF3B70021EBF8 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DBEB77E2AFAF3B70021EBF8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		9DBEB7832AFAF3B70021EBF8 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DBEB77E2AFAF3B70021EBF8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9DBEB75D2AFAECCE0021EBF8 /* Project object */;
 }
