@@ -94,12 +94,24 @@
         <!--Snaps View Controller-->
         <scene sceneID="BC5-9G-9GE">
             <objects>
-                <viewController id="hsJ-Xd-j3U" customClass="SnapsViewController" customModule="GutierrezSnapchat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="hsJ-Xd-j3U" customClass="SnapsViewController" customModule="GutierrezSnapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dIH-c7-Tx7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="e5g-Y5-nAR">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="O8v-cs-As5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="O8v-cs-As5" firstAttribute="bottom" secondItem="e5g-Y5-nAR" secondAttribute="bottom" id="2dV-6t-bDM"/>
+                            <constraint firstItem="O8v-cs-As5" firstAttribute="trailing" secondItem="e5g-Y5-nAR" secondAttribute="trailing" id="HYN-9R-nkZ"/>
+                            <constraint firstItem="e5g-Y5-nAR" firstAttribute="top" secondItem="O8v-cs-As5" secondAttribute="top" id="XIa-DY-6kr"/>
+                            <constraint firstItem="e5g-Y5-nAR" firstAttribute="leading" secondItem="O8v-cs-As5" secondAttribute="leading" id="ngW-qd-nwn"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lLG-CL-CMj">
                         <barButtonItem key="leftBarButtonItem" title="Cerrar Sesion" id="fNP-Or-Irk">
@@ -113,10 +125,72 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tablaSnaps" destination="e5g-Y5-nAR" id="U0L-hO-Uwj"/>
+                        <segue destination="lSA-rc-RJW" kind="show" identifier="versnapsegue" id="akZ-ez-pas"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DMZ-Ul-zeL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1854" y="-44"/>
+        </scene>
+        <!--Ver Snap View Controller-->
+        <scene sceneID="b2F-lm-yCC">
+            <objects>
+                <viewController id="lSA-rc-RJW" customClass="VerSnapViewController" customModule="GutierrezSnapchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dnb-he-OGL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mensaje:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAM-1s-49g">
+                                <rect key="frame" x="20" y="115" width="374" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="Qo1-Z0-Ix3"/>
+                                    <constraint firstAttribute="height" constant="36" id="hFx-w6-1SI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imagen Enviada:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krf-QU-T8e">
+                                <rect key="frame" x="20" y="175" width="374" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="DoC-x4-yt2"/>
+                                    <constraint firstAttribute="width" constant="374" id="v3t-kX-3Ln"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aIW-iZ-xQC">
+                                <rect key="frame" x="20" y="241" width="374" height="189"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="F78-SK-071"/>
+                                    <constraint firstAttribute="height" constant="189" id="KLA-IL-gbZ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q32-Fs-Zz9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aIW-iZ-xQC" firstAttribute="top" secondItem="krf-QU-T8e" secondAttribute="bottom" constant="30" id="KDU-cA-O05"/>
+                            <constraint firstItem="krf-QU-T8e" firstAttribute="top" secondItem="vAM-1s-49g" secondAttribute="bottom" constant="24" id="Mrk-DT-62d"/>
+                            <constraint firstItem="aIW-iZ-xQC" firstAttribute="leading" secondItem="Q32-Fs-Zz9" secondAttribute="leading" constant="20" id="TXj-0d-9Mr"/>
+                            <constraint firstItem="vAM-1s-49g" firstAttribute="centerX" secondItem="Dnb-he-OGL" secondAttribute="centerX" id="TjJ-0u-Rep"/>
+                            <constraint firstItem="Q32-Fs-Zz9" firstAttribute="trailing" secondItem="aIW-iZ-xQC" secondAttribute="trailing" constant="20" id="eah-6p-Dbx"/>
+                            <constraint firstItem="vAM-1s-49g" firstAttribute="top" secondItem="Q32-Fs-Zz9" secondAttribute="top" constant="27" id="kjg-eI-iPm"/>
+                            <constraint firstItem="krf-QU-T8e" firstAttribute="centerX" secondItem="Dnb-he-OGL" secondAttribute="centerX" id="rHZ-3p-JMn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dYl-tK-RaV"/>
+                    <connections>
+                        <outlet property="imageView" destination="aIW-iZ-xQC" id="smY-fZ-bC8"/>
+                        <outlet property="lblMensaje" destination="vAM-1s-49g" id="Ev5-59-BgJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qbk-rb-tey" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1853.6231884057972" y="642.1875"/>
         </scene>
         <!--Enviar Mensaje-->
         <scene sceneID="yrN-AW-Uaa">
@@ -166,11 +240,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Enviar Mensaje" id="P6i-LF-AZg">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="camera.fill" catalog="system" id="KvT-bs-SOD">
-                            <connections>
-                                <action selector="camaraTapped:" destination="pbm-tq-fMF" id="m1S-79-x08"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="camera.fill" catalog="system" id="KvT-bs-SOD">
+                                <connections>
+                                    <action selector="camaraTapped:" destination="pbm-tq-fMF" id="m1S-79-x08"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="organize" id="cuO-kD-qTn">
+                                <connections>
+                                    <action selector="mediaTapped:" destination="pbm-tq-fMF" id="WOF-j2-Xg0"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="descripcionTextField" destination="nq2-XI-62C" id="YaB-lg-S5v"/>
